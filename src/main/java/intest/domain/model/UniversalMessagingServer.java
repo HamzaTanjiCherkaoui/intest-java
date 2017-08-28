@@ -16,4 +16,12 @@ public class UniversalMessagingServer {
     public int getPort() {
         return port;
     }
+
+    @Override
+    public String toString() {
+        return "UniversalMessagingServer{" +
+                "url='" + url + '\'' +
+                ", port=" + port +
+                '}';
+    }
 }
