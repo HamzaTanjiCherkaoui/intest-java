@@ -20,12 +20,7 @@ public class JMSProbe implements Probe {
         Thread t = new Thread(() -> {
             Random rnd = new Random();
             for(int i = 0; i<rnd.nextInt(10); i++) {
-                try {
-                    Thread.sleep(1000);
-                    handleMessage("received message");
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
+                handleMessage("received message");
             }
         });
         t.run();

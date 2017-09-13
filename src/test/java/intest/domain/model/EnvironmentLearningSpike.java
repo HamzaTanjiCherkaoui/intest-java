@@ -7,7 +7,7 @@ public class EnvironmentLearningSpike {
     @Test
     public void testCreateServer() {
         Environment env = new Environment();
-        env.addUMServer("um1", new UniversalMessagingServer("localhost", 9000));
+        env.addUMServer("um1", new UniversalMessagingServer("localhost", 9000, "local_um"));
 
         env.getUms().forEach((key, um) -> System.out.println("UM server called " + key + " " + um));
     }
